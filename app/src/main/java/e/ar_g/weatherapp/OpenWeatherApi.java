@@ -11,6 +11,7 @@ public interface OpenWeatherApi {
   @GET("/data/2.5/weather")
   Call<WeatherResponse> getCurrentWeather(
     @Query("q") String cityAndCountryCode,
-    @Query("APPID") String apiKey
+    @Query("APPID") String apiKey,
+    @Query("units") String units
   );
 }
